@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgViewCover"
+        android:layout_width="@dimen/contributor_width_height"
+        android:layout_height="@dimen/contributor_width_height"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/contributor_margin_top"
+        android:textColor="@android:color/black"
+        android:text="text"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        app:layout_constraintLeft_toLeftOf="@id/imgViewCover"
+        app:layout_constraintRight_toRightOf="@id/imgViewCover"
+        app:layout_constraintTop_toBottomOf="@id/imgViewCover"
+        tools:ignore="MissingPrefix" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
