@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgViewCover"
+        android:layout_width="@dimen/width_height"
+        android:layout_height="@dimen/width_height"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginLeft="@dimen/margin"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textStyle="normal"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin_image_repo_name"
+        android:text="text"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        app:layout_constraintTop_toTopOf="@id/imgViewCover"
+        app:layout_constraintBottom_toBottomOf="@id/imgViewCover"
+        app:layout_constraintStart_toEndOf="@id/imgViewCover"
+        app:layout_constraintRight_toLeftOf="@+id/imgViewCover"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/tv_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="text"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@id/imgViewCover"
+        app:layout_constraintRight_toLeftOf="@+id/imgViewCover"
+        tools:ignore="MissingPrefix" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/iron"
+        app:layout_constraintTop_toBottomOf="@id/imgViewCover"></View>
+
+    <TextView
+        android:id="@+id/tvAuthor_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginTop="@dimen/description_margin_top"
+        android:text="Descrpition"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imgViewCover"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_description"
+        android:text="Descrpition"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tvAuthor_description"
+        app:layout_constraintTop_toBottomOf="@id/tvAuthor_description"
+        tools:ignore="MissingPrefix" />
+
+    <View
+        android:id="@+id/view_second"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/iron"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"></View>
+
+    <TextView
+        android:id="@+id/tv_contributors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="Contributors"
+        fontPath="fonts/Roboto-RobotoRegular.ttf"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvAuthor_description"
+        app:layout_constraintTop_toBottomOf="@id/view_second"
+        tools:ignore="MissingPrefix" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular_contributors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="@id/my_recycler_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/my_recycler_view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        android:layout_margin="@dimen/margin"
+        app:layoutManager="GridLayoutManager"
+        app:spanCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contributors"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
