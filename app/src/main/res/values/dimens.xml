@@ -14,6 +14,6 @@
     <dimen name="recycler_view_margin">5dp</dimen>
     <dimen name="contributor_width_height">70dp</dimen>
     <dimen name="contributor_margin_top">5dp</dimen>
-    <dimen name="padding_description">1dp</dimen>
+    <dimen name="padding_description">10dp</dimen>
 
 </resources>
